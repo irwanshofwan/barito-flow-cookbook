@@ -30,3 +30,15 @@ suites:
       inspec_tests:
         - test/integration/consumer
     attributes:
+  - name: router
+    run_list:
+      - recipe[barito-flow::router]
+    verifier:
+      inspec_tests:
+        - test/integration/router
+    attributes:
+      barito-flow:
+        env_vars:
+          BARITO_ROUTER_ADDRESS: '8081'
+          BARITO_KIBANA_ROUTER_ADDRESS: '8082'
+          BARITO_ROUTER_MARKET_URL: 'http://localhost:8080/api/apps'
