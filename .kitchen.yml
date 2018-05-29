@@ -38,7 +38,8 @@ suites:
         - test/integration/router
     attributes:
       barito-flow:
-        env_vars:
-          BARITO_ROUTER_ADDRESS: '8081'
-          BARITO_KIBANA_ROUTER_ADDRESS: '8082'
-          BARITO_ROUTER_MARKET_URL: 'http://localhost:8080/api/apps'
+        router:
+          env_vars:
+            BARITO_ROUTER_ADDRESS: ':8081'
+            BARITO_KIBANA_ROUTER_ADDRESS: ':8082'
+            BARITO_ROUTER_MARKET_URL: 'http://localhost:8080/api/apps'
