@@ -20,3 +20,4 @@ issues_url 'https://github.com/BaritoLog/barito-flow-cookbook/issues'
 source_url 'https://github.com/BaritoLog/barito-flow-cookbook'
 
 depends 'ark'
+depends 'consul'
