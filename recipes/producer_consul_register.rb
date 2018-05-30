@@ -7,11 +7,11 @@
 #
 
 config = {
-  "name": "#{node['hostname']}-barito-receiver",
+  "id": "#{node['hostname']}-barito-receiver",
+  "name": "barito-receiver",
   "tags": ["app:"],
   "address": node['ipaddress'],
   "port": 8080,
-  "service": "barito-receiver",
   "meta": {
     "http_schema": "http"
   }
