@@ -7,18 +7,14 @@
 #
 
 config = {
-  "Node": node['hostname'],
-  "Service": {
-    "ID": "#{node['hostname']}-barito-receiver",
-    "Service": "barito-receiver",
-    "Tags": ["app:"],
-    "Address": node['ipaddress'],
-    "Meta": {
-        "http_schema": "http"
-    },
-    "Port": 8080
-  },
-  "SkipNodeUpdate": true
+  "name": "#{node['hostname']}-barito-receiver",
+  "tags": ["app:"],
+  "address": node['ipaddress'],
+  "port": 8080,
+  "service": "barito-receiver",
+  "meta": {
+    "http_schema": "http"
+  }
 }
 
 consul_register_service "barito-receiver" do
