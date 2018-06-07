@@ -40,3 +40,9 @@ action :create do
     action %i[create enable start]
   end
 end
+
+action :restart do
+  systemd_unit "#{new_resource.name}.service" do
+    action :restart
+  end
+end
