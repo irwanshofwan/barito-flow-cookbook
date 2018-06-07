@@ -28,7 +28,7 @@ default[cookbook_name]['consul']['bin'] = '/opt/bin/consul'
 #
 
 # producer version
-default[cookbook_name]['producer']['version'] = 'v0.1.2'
+default[cookbook_name]['producer']['version'] = 'v0.5.0'
 producer_version = node[cookbook_name]['producer']['version']
 
 # where to get the binary
@@ -44,7 +44,7 @@ default[cookbook_name]['producer']['env_vars_file'] = "#{node[cookbook_name]['pr
 default[cookbook_name]['producer']['env_vars'] = {}
 
 # producer daemon options, used to create the ExecStart option in service
-default[cookbook_name]['producer']['cli_opts'] = ['r']
+default[cookbook_name]['producer']['cli_opts'] = ['p']
 
 # log file location
 default[cookbook_name]['producer']['prefix_log'] = '/var/log/barito-flow-producer'
@@ -76,7 +76,7 @@ default[cookbook_name]['producer']['systemd_unit'] = {
 #
 
 # consumer version
-default[cookbook_name]['consumer']['version'] = 'v0.1.2'
+default[cookbook_name]['consumer']['version'] = 'v0.5.0'
 consumer_version = node[cookbook_name]['consumer']['version']
 
 # where to get the binary
@@ -92,7 +92,7 @@ default[cookbook_name]['consumer']['env_vars_file'] = "#{node[cookbook_name]['co
 default[cookbook_name]['consumer']['env_vars'] = {}
 
 # consumer daemon options, used to create the ExecStart option in service
-default[cookbook_name]['consumer']['cli_opts'] = ['f']
+default[cookbook_name]['consumer']['cli_opts'] = ['c']
 
 # log file location
 default[cookbook_name]['consumer']['prefix_log'] = '/var/log/barito-flow-consumer'
@@ -124,7 +124,7 @@ default[cookbook_name]['consumer']['systemd_unit'] = {
 #
 
 # router version
-default[cookbook_name]['router']['version'] = 'v0.1.0'
+default[cookbook_name]['router']['version'] = 'v0.1.1'
 router_version = node[cookbook_name]['router']['version']
 
 # where to get the binary

@@ -42,4 +42,5 @@ suites:
           env_vars:
             BARITO_ROUTER_ADDRESS: ':8081'
             BARITO_KIBANA_ROUTER_ADDRESS: ':8082'
+            BARITO_XTAIL_ROUTER_ADDRESS: ':8083'
             BARITO_ROUTER_MARKET_URL: 'http://localhost:8080/api/apps'
