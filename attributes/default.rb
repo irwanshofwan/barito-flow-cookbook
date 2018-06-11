@@ -28,7 +28,7 @@ default[cookbook_name]['consul']['bin'] = '/opt/bin/consul'
 #
 
 # producer version
-default[cookbook_name]['producer']['version'] = 'v0.5.0'
+default[cookbook_name]['producer']['version'] = 'v0.6.0'
 producer_version = node[cookbook_name]['producer']['version']
 
 # where to get the binary
@@ -76,7 +76,7 @@ default[cookbook_name]['producer']['systemd_unit'] = {
 #
 
 # consumer version
-default[cookbook_name]['consumer']['version'] = 'v0.5.0'
+default[cookbook_name]['consumer']['version'] = 'v0.6.0'
 consumer_version = node[cookbook_name]['consumer']['version']
 
 # where to get the binary
