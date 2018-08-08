@@ -140,7 +140,7 @@ default[cookbook_name]['router']['env_vars_file'] = "#{node[cookbook_name]['rout
 default[cookbook_name]['router']['env_vars'] = {}
 
 # router daemon options, used to create the ExecStart option in service
-default[cookbook_name]['router']['cli_opts'] = []
+default[cookbook_name]['router']['cli_opts'] = ['a']
 
 # log file location
 default[cookbook_name]['router']['prefix_log'] = '/var/log/barito-router'
