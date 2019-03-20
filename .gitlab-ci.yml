@@ -48,7 +48,7 @@ build-base-barito-flow-consumer:
   variables:
     OUTPUT_IMAGE: "lxd-barito-flow-consumer-$CI_COMMIT_TAG"
   script:
-    - curl -s https://raw.githubusercontent.com/BaritoLog/cx-scripts/master/gitlabci-build-base.sh | bash ./packer-barito-flow-consumer.json
+    - curl -s https://raw.githubusercontent.com/BaritoLog/cx-scripts/master/gitlabci-build-base.sh | bash -s ./packer-barito-flow-consumer.json
     - curl -s https://raw.githubusercontent.com/BaritoLog/cx-scripts/master/gitlabci-copy-image.sh | bash
   tags:
     - bionic
