@@ -22,7 +22,8 @@
     {
       "type": "chef-solo",
       "cookbook_paths": ["{{user `cookbook_paths`}}"],
-      "run_list": ["recipe[barito-flow::producer]"]
+      "run_list": ["recipe[barito-flow::producer]"],
+      "chef_license": "accept"
     }
   ]
 }
