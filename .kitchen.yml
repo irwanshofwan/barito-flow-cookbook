@@ -8,6 +8,8 @@ provisioner:
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
+  client_rb:
+    chef_license: accept
 
 verifier:
   name: inspec
@@ -24,6 +26,11 @@ suites:
   - name: producer
     run_list:
       - recipe[barito-flow::producer]
+    driver_config:
+      customize:
+        memory: 2048
+      network:
+        - ['private_network', {ip: '192.168.33.26'}]
     verifier:
       inspec_tests:
         - test/integration/producer
@@ -31,6 +38,11 @@ suites:
   - name: consumer
     run_list:
       - recipe[barito-flow::consumer]
+    driver_config:
+      customize:
+        memory: 2048
+      network:
+        - ['private_network', {ip: '192.168.33.25'}]
     verifier:
       inspec_tests:
         - test/integration/consumer
