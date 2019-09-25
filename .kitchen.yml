@@ -26,15 +26,22 @@ suites:
   - name: producer
     run_list:
       - recipe[barito-flow::producer]
+      - recipe[consul::default]
+      - recipe[barito-flow::producer_consul_register]
     driver_config:
       customize:
         memory: 2048
       network:
-        - ['private_network', {ip: '192.168.33.26'}]
+        - ["private_network", { ip: "192.168.33.26" }]
     verifier:
       inspec_tests:
         - test/integration/producer
     attributes:
+      consul:
+        run_as_server: false
+        hosts: ["127.0.0.1"]
+        cli_opts:
+          advertise: "192.168.33.26"
   - name: consumer
     run_list:
       - recipe[barito-flow::consumer]
@@ -42,7 +49,7 @@ suites:
       customize:
         memory: 2048
       network:
-        - ['private_network', {ip: '192.168.33.25'}]
+        - ["private_network", { ip: "192.168.33.25" }]
     verifier:
       inspec_tests:
         - test/integration/consumer
@@ -57,7 +64,7 @@ suites:
       barito-flow:
         router:
           env_vars:
-            BARITO_ROUTER_ADDRESS: ':8081'
-            BARITO_KIBANA_ROUTER_ADDRESS: ':8082'
-            BARITO_XTAIL_ROUTER_ADDRESS: ':8083'
-            BARITO_ROUTER_MARKET_URL: 'http://localhost:8080/api/apps'
+            BARITO_ROUTER_ADDRESS: ":8081"
+            BARITO_KIBANA_ROUTER_ADDRESS: ":8082"
+            BARITO_XTAIL_ROUTER_ADDRESS: ":8083"
+            BARITO_ROUTER_MARKET_URL: "http://localhost:8080/api/apps"
