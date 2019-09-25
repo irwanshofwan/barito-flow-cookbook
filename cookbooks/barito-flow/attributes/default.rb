@@ -22,7 +22,7 @@ default[cookbook_name]['prefix_bin'] = '/opt/bin'
 # Attributes for registering these services to consul
 default[cookbook_name]['consul']['config_dir'] = '/opt/consul/etc'
 default[cookbook_name]['consul']['bin'] = '/opt/bin/consul'
-default[cookbook_name]['consul']['cli_opts'] = {
+default['consul']['cli_opts'] = {
   'config-dir' => default[cookbook_name]['consul']['config_dir'],
   'enable-script-checks' => nil,
 }
