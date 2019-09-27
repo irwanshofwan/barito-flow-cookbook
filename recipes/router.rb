@@ -38,3 +38,8 @@ barito_flow_binary_systemd service_name do
   prefix_log node[cookbook_name]['router']['prefix_log']
   log_file_name node[cookbook_name]['router']['log_file_name']
 end
+
+execute "reschedule daily crontab" do
+  command "sed -i 's/25 6   * * */25 20   * * */' /etc/crontab"
+  only_if "grep '25 6   * * *' /etc/crontab 2>&1 >/dev/null"
+end
