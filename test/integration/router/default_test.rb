@@ -40,3 +40,9 @@ describe systemd_service('barito-router') do
   it { should be_enabled }
   it { should be_running }
 end
+
+describe file('/etc/crontab') do
+  its('content') {should match /^25 20\W{6}/}
+end
+
+
