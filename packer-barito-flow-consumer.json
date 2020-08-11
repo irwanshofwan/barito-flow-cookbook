@@ -28,7 +28,7 @@
       "json":{
         "barito-flow": {
           "consumer": {
-            "version": "v0.13.3",
+            "version": "v0.13.4",
             "env_vars": {
               "BARITO_CONSUL_URL": "consul.service.consul:8500",
               "BARITO_KAFKA_BROKERS": "kafka.service.consul:9092",
@@ -43,7 +43,7 @@
               "ELASTIC_PASSWORD": ""
             }
           }
-        }  
+        }
       }
     }
   ]

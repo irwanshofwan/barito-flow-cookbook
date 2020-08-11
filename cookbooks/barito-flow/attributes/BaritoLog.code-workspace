@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "/Users/fadlinurhasan/Documents/GOJEK/github/baritoLog"
+		},
+		{
+			"path": "/Users/fadlinurhasan/Documents/GOJEK/github/pathfinder-cm"
+		},
+		{
+			"path": "/Users/fadlinurhasan/Documents/GOJEK/golabs/barito-infra"
+		},
+		{
+			"path": "/Users/fadlinurhasan/Documents/GOJEK/golabs/infrastructure/charts/kube-charts"
+		},
+		{
+			"path": "/Users/fadlinurhasan/Documents/GOJEK/golabs/gopay_infra/ansible"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
