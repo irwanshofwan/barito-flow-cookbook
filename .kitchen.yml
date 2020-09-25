@@ -68,3 +68,16 @@ suites:
             BARITO_KIBANA_ROUTER_ADDRESS: ":8082"
             BARITO_XTAIL_ROUTER_ADDRESS: ":8083"
             BARITO_ROUTER_MARKET_URL: "http://localhost:8080/api/apps"
+  - name: exporter
+    run_list:
+      - recipe[barito-flow::exporter]
+    verifier:
+      inspec_tests:
+        - test/integration/exporter
+    attributes:
+      barito-flow:
+        exporter:
+          env_vars:
+            BARITO_MARKET_TOKEN: "PLACEHOLDER"
+            BARITO_MARKET_HOST: "http://10.202.48.23:30010"
+            PRODUCE_URL: "http://10.202.48.23:30013/produce_batch"
