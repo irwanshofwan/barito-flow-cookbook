@@ -218,3 +218,14 @@ default[cookbook_name]['exporter']['systemd_unit'] = {
     'WantedBy' => 'multi-user.target'
   }
 }
+#
+# Coch elasticsearch exporter
+#
+
+default["coch_elasticseach_exporter"]["dir"] = '/opt/conformance-checker-elasticalert-exporter'
+default["coch_elasticseach_exporter"]["binary"] = "#{node["coch_elasticseach_exporter"]["dir"]}/bin"
+default["coch_elasticseach_exporter"]["version"] = "0.0.1"
+# replace using a correct 
+default["coch_elasticseach_exporter"]["checksum"] = "fb7cb1ccb4c4ef4e306ab44462fd5d5194b1c461"
+default["coch_elasticseach_exporter"]["binary_url"] = "https://github.com/irwanshofwan/golang-echo-example/releases/download/golang-echo-example/archive/#{node["coch_elasticseach_exporter"]["version"]}.zip"
+#default["coch_elasticseach_exporter"]["binary_url"] = "https://github.com/irwanshofwan/golang-echo-example/releases/download/v#{node["coch_elasticseach_exporter"]["version"]}/coch_elasticseach_exporter-#{node["coch_elasticseach_exporter"]["version"]}.linux-amd64.tar.xz"
